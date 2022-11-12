@@ -52,7 +52,7 @@ CA[600];
                 printf("\n\nQuantos Cadastros Voce Deseja Realizar? ");
                 scanf("%d", &quant);
 
-            for(i=1;1<=quant;i++){
+            for(i=1;i<=quant;i++){
                 system("cls");
                 printf("\n\n\t\t\t   INICIANDO CADASTRO %d\n", i);
                 printf("\n\n\t\t\t   ------------------\n\n");
@@ -297,7 +297,7 @@ CA[600];
                             printf(" 1- Nome do Paciente");
                             printf("\n 2- Telefone do Paciente");
                             printf("\n 3- CPF");
-                            printf("\n 4- Endereço");
+                            printf("\n 4- EndereÃ§o");
                             printf("\n 5- Bairro");
                             printf("\n 6- Cidade");
                             printf("\n 7- Estado");
