@@ -1,14 +1,24 @@
+
 #include <stdio.h>
 #include<string.h>
 #include <stdlib.h>
+#include <locale.h>
+#include <conio.h>
+
+void main(){
+
+        
+
+
+}
 
 int main(){
 
 
     int opcao, opcao1, opcao2, opcao3, opcao4, i, quant;
     struct referencia{
-        char nome0[100], nome1[100], nome2[100], nome3[100], nome4[100], nome5[100], nome6[100], nome7[100], nome8[100], nome9[100],
-        nome10[100], nome11[100];
+        char nome0[200], nome1[200], nome2[200], nome3[200], nome4[200], nome5[200], nome6[200], nome7[200], nome8[200], nome9[200],
+        nome10[200], nome11[200], op[50];
     }
 
 
@@ -26,9 +36,14 @@ CA[600];
 CA[600];
 
 
-            system("color F4");
+
+
+            system("color F3");
             system("cls");
 
+
+
+            inicio:
 
                 printf("---------------------------------------------------------------------------");
                 printf("\n\t\t\t  Sistema de Saude\n");
@@ -44,15 +59,17 @@ CA[600];
                 printf("---------------------------------------------------------------------------\n\n");
                 printf("\n\tQual Opcao Voce Deseja Acessar? ");
                 scanf("%d", &opcao);
+                getchar();
+
 
 
         switch(opcao){
             case 1:
                 system("cls");
-                printf("\n\nQuantos Cadastros Voce Deseja Realizar? ");
+                printf("\n\nQuantos Cadastros Voce Deseja Realizar? Digite 0 para voltar ao menu Principal:   ");
                 scanf("%d", &quant);
 
-            for(i=1;i<=quant;i++){
+               for (i=1;i<=quant;i++){
                 system("cls");
                 printf("\n\n\t\t\t   INICIANDO CADASTRO %d\n", i);
                 printf("\n\n\t\t\t   ------------------\n\n");
@@ -94,12 +111,18 @@ CA[600];
                 scanf("%[\n]s", CA[i].nome11);
                 printf("\n\n\t");
                 system("pause");
-                return (menu);
-            }
+                system("cls");
+                getchar();
+
+
+              }
             break;
+
 
             case 2:
                 system("cls");
+                printf("\n\nDigite a Quantidade de cadastros a exibir ou 0 para Voltar ao Menu Principal: ");
+                scanf("%d", &quant);
 
                 for(i=1;i<=quant;i++){
                     system("cls");
@@ -118,6 +141,8 @@ CA[600];
                     printf("\nEmail: %s\n", CA[i].nome10);
                     printf("\nComorbidade: %s\n", CA[i].nome11);
                     system("pause");
+                    system ("cls");
+
                 }
                     break;
 
@@ -140,6 +165,8 @@ CA[600];
                             printf("\n 11- Comorbidade\n\n");
                             printf("Qual Opcao Voce Deseja Acessar? \n");
                             scanf("%d", &opcao1);
+                            system("pause");
+                            system("cls");
 
                 switch(opcao1){
                  case 1:
@@ -442,7 +469,12 @@ CA[600];
                         system("pause");
                         return 0;
                         break;
+
                 }
+
+                } goto inicio;
+
                 }
-                }
+
+
 
